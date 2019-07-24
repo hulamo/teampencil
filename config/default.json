@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://hulamo:33128284@cluster0-dhgjv.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "secret",
+    "githubClientId": "",
+    "githubSecret": ""
+}
