@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-md bg-dark navbar-dark">
-      <a className="navbar-brand" href="#">
+    <nav className="navbar navbar-expand-md fixed-top bg-dark navbar-dark">
+      <Link className="navbar-brand" to="/dashboard">
         TeamPencil
-      </a>
+      </Link>
       <button
         className="navbar-toggler"
         type="button"
@@ -17,32 +18,32 @@ const Navbar = () => {
       <div className="collapse navbar-collapse" id="collapsibleNavbar">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to="/dfolders">
               Folders
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to="/archivos">
               Archivos
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to="/contactos">
               Contactos
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
       <ul className="nav navbar-nav navbar-right">
         <li className="nav-item">
-          <a className="nav-link" href="#">
-            Mi Cuneta
-          </a>
+          <Link className="nav-link" to="/micuenta">
+            Mi Cuenta
+          </Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">
+          <Link className="nav-link" to="/">
             Logout
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

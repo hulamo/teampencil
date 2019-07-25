@@ -1,0 +1,100 @@
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: rgb(73, 88, 107);
+}
+
+hr {
+    color: #eee;
+    height: 1px;
+    width: 100%;
+}
+
+h2 {
+    color: rgb(73, 88, 107);
+    text-transform: uppercase;
+}
+
+h2 span {
+    color: #007bff;
+}
+
+.dropShadow {
+    filter: drop-shadow(0 15px 15px #333);
+}
+
+.helperClass {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.SortableItem:focus {
+    border: 1px dotted #eee;
+}
+
+.SortableItem {
+    font-size: 1rem;
+    padding: 15px 20px;
+    list-style: none;
+    background-color: #007bff;
+    color: #fff;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: move;
+    flex: 1;
+}
+
+.SortableList {
+    display: flex;
+}
+
+.SortableListGrid {
+    width: 460px;
+    display: grid;
+    grid-template-rows: repeat(3, 150px);
+    grid-template-columns: repeat(3, 150px);
+}
+
+.SortableListGrid .SortableItem {
+    justify-content: center;
+}
+
+.helperGrid {
+    justify-content: center;
+}
+
+.SortableListCards {
+    text-align: left;
+    list-style: none;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.CardItem {
+    list-style: none;
+}
+
+.SortableItem.disabled {
+    background-color: #eee;
+    color: #333;
+}
+
+.form-elegant .font-small {
+    font-size: 0.6rem;
+}
+
+.form-elegant .z-depth-1a {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(37, 39, 41, 0.26), 0 4px 12px 0 rgba(44, 45, 48, 0.25);
+    box-shadow: 0 2px 5px 0 rgba(40, 40, 41, 0.26), 0 4px 12px 0 rgba(37, 38, 39, 0.25);
+}
+
+.form-elegant .z-depth-1-half,
+.form-elegant .btn:hover {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(36, 38, 39, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
+    box-shadow: 0 5px 11px 0 rgba(35, 35, 36, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
+}
