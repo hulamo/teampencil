@@ -4,13 +4,16 @@ import { Link } from "react-router-dom";
 // import { users } from "../../../../routes/api/users";
 import axios from "axios";
 
-const Login = () => {
+const Register = () => {
   const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
     email: "",
-    password: ""
+    password: "",
+    password2: ""
   });
 
-  const { email, password } = formData;
+  const { firstname, lastname, email, password, password2 } = formData;
 
   const onChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,7 +21,7 @@ const Login = () => {
   const onSubmit = async e => {
     e.preventDefault();
     // console.log(formData);
-    /*   if (password !== password2) {
+    if (password !== password2) {
       console.log("Contrasñas No Cuadran");
     } else {
       /*
@@ -44,8 +47,8 @@ const Login = () => {
       } catch (err) {
         console.error(err.response.data);
       }
-    
-  } */
+    */
+    }
   };
   return (
     <Fragment>
@@ -55,6 +58,32 @@ const Login = () => {
             <form onSubmit={e => onSubmit(e)}>
               <p className="h5 text-center mb-4">Sign up</p>
               <div className="grey-text">
+                <MDBInput
+                  label="Nombre"
+                  name="firstname"
+                  value={firstname}
+                  onChange={e => onChange(e)}
+                  required
+                  icon="user"
+                  group
+                  type="text"
+                  validate
+                  error="wrong"
+                  success="right"
+                />
+                <MDBInput
+                  label="Apellidos"
+                  name="lastname"
+                  value={lastname}
+                  onChange={e => onChange(e)}
+                  required
+                  icon="user"
+                  group
+                  type="text"
+                  validate
+                  error="wrong"
+                  success="right"
+                />
                 <MDBInput
                   label="Email"
                   name="email"
@@ -79,12 +108,22 @@ const Login = () => {
                   error="wrong"
                   success="right"
                 />
+                <MDBInput
+                  label="Confirma Contraseña"
+                  name="password2"
+                  value={password2}
+                  onChange={e => onChange(e)}
+                  icon="exclamation-triangle"
+                  group
+                  type="password"
+                  validate
+                />
               </div>
               <MDBRow className="justify-content-md-center">
                 <MDBCol md="6">
                   <div className="text-center">
                     <MDBBtn type="submit" color="light">
-                      Login
+                      Registro
                     </MDBBtn>
                   </div>
                 </MDBCol>
@@ -102,4 +141,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

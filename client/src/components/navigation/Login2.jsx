@@ -1,17 +1,15 @@
 import React, { Fragment, useState } from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from "mdbreact";
-import { Link } from "react-router-dom";
 
 const Login = () => {
   const [formData, setFormData] = useState({
     nombre: "",
-    apellido: "",
     emial: "",
     contrasena: "",
     contrasena2: ""
   });
 
-  const { nombre, apellido, email, contrasena, contrasena2 } = formData;
+  const { nombre, email, contrasena, contrasena2 } = formData;
 
   const onChange = e =>
     setFormData({ ...FormData, [e.target.name]: e.target.value });
@@ -27,19 +25,6 @@ const Login = () => {
                   label="Nombre"
                   name="nombre"
                   value={nombre}
-                  onChange={e => onChange(e)}
-                  required
-                  icon="user"
-                  group
-                  type="text"
-                  validate
-                  error="wrong"
-                  success="right"
-                />
-                <MDBInput
-                  label="Apellidos"
-                  name="apellido"
-                  value={apellido}
                   onChange={e => onChange(e)}
                   required
                   icon="user"
@@ -84,18 +69,9 @@ const Login = () => {
                   validate
                 />
               </div>
-              <MDBRow className="justify-content-md-center">
-                <MDBCol md="6">
-                  <div className="text-center">
-                    <MDBBtn color="light">Registro</MDBBtn>
-                  </div>
-                </MDBCol>
-                <MDBCol md="6">
-                  <div className="text-center">
-                    <Link to="/login"> Login</Link>
-                  </div>
-                </MDBCol>
-              </MDBRow>
+              <div className="text-center">
+                <MDBBtn color="light">Register</MDBBtn>
+              </div>
             </form>
           </MDBCol>
         </MDBRow>
